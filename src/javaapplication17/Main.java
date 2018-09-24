@@ -7,6 +7,7 @@ package javaapplication17;
 
 import java.util.ArrayList;
 import java.awt.*;
+import java.util.Collection;
 import java.util.HashMap;
 
 /**
@@ -40,9 +41,20 @@ public class Main {
             System.out.println(j.getNombre());
         }
         
-        HashMap<String, Jugador> jugadores2 = new HashMap<>();
-        jugadores2.put(j1.getNombre(), j1);
+        Equipo2 e2 = new Equipo2("UvU");
+        Jugador2 j2 = new Jugador2(123, "uwu");
         
-        System.out.println(jugadores2.get(j1.getNombre()).getNombre());
+        boolean resultado2 = e2.addJugador(j2);
+        if (resultado2){
+            System.out.println("OKx2");
+        } else {
+            System.out.println("KOx2");
+        }
+        
+        Collection jgs = e2.getJugadores().values();
+        
+        System.out.println(jgs);
+        
+        
     }
 }
